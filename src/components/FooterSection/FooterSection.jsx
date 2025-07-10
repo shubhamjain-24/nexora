@@ -41,7 +41,7 @@ export default function FooterSection() {
           </a>
           <a href="mailto:info@Nexoura.tech" className="footer-contact-item">
             <FiMail className="footer-icon" />
-            info@Nexoura.tech
+            info@nexoura.in
           </a>
         </div>
       </div>
