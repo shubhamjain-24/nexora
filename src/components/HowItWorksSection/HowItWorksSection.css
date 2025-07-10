@@ -1,0 +1,79 @@
+.how-it-works {
+  background-color: #ffffff; /* White background */
+  border-radius: 40px;
+  padding: 4rem 1.5rem;
+  margin: 4rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.how-it-works h2 {
+  font-size: 2.2rem;
+  color: #1E1E1E;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.how-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.how-card {
+  background-color: #FFF7F6; /* Soft pink tone for cards */
+  border-radius: 20px;
+  padding: 2rem;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.how-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(214, 87, 57, 0.15); /* Soft pinky shadow */
+}
+
+.how-icon {
+  background-color: #FFDAD3; /* Slightly deeper soft-pink accent */
+  color: #D65739;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.how-title {
+  font-weight: 600;
+  color: #1e1e1e;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.how-desc {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .how-cards {
+    gap: 1.5rem;
+  }
+
+  .how-card {
+    width: 100%;
+    max-width: 320px;
+  }
+}
