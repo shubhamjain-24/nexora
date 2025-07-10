@@ -74,10 +74,16 @@
 @media (max-width: 768px) {
   .success-cards {
     flex-direction: column;
-    align-items: center;
+   align-items: center;
+   justify-content: center;
+    display: flex;
   }
-
+.success-section{
+  /* width: 100%; */
+}
   .story-card {
-    max-width: 100%;
+    /* max-width: 100%; */
+    /* width: 80%; */
+    padding: 20px 10px;
   }
 }

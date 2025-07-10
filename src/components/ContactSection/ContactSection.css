@@ -82,9 +82,14 @@
     flex-direction: column;
     border-radius: 24px;
   }
-
+.contact-wrapper{
+  margin-top: -100px;
+}
   .contact-left,
   .contact-right {
     padding: 2rem;
+  }
+  .contact-right{
+    margin-top: -80px;
   }
 }

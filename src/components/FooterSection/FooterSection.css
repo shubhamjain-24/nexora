@@ -123,4 +123,7 @@
   .footer-contact-item {
     justify-content: center;
   }
+  .footer-links{
+    margin-top: -80px;
+  }
 }
