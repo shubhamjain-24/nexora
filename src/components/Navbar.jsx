@@ -7,12 +7,12 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-       <a href="#hero" className="logo">Nexora</a>
+       <a href="#hero" className="logo">Nexoura</a>
         <div className={`nav-links ${isOpen ? 'active' : ''}`}>
           <ul>
             <li><a href="#services">Services</a></li>
             <li><a href="#ai">Our AI Assistant</a></li>
-            <li><a href="#how-it-works">The Nexora Way</a></li>
+            <li><a href="#how-it-works">The Nexoura Way</a></li>
             <li className="mobile-only">
               <button className="outline-btn">+1 (352) 247-2292</button>
             </li>

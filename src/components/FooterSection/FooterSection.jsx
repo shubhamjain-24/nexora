@@ -10,7 +10,7 @@ export default function FooterSection() {
 
         {/* Brand + Social */}
         <div className="footer-brand">
-          <h2 className="footer-logo">NEXORA</h2>
+          <h2 className="footer-logo">Nexoura</h2>
           <p className="footer-desc">
             Connecting global talent to top U.S. tech roles through expert consulting and AI-driven solutions.
           </p>
@@ -28,7 +28,7 @@ export default function FooterSection() {
             <li><a href="#">Home</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#ai">The Nexora Way</a></li>
+            <li><a href="#ai">The Nexoura Way</a></li>
           </ul>
         </div>
 
@@ -39,15 +39,15 @@ export default function FooterSection() {
             <FiPhone className="footer-icon" />
             +1 (352) 247-2292
           </a>
-          <a href="mailto:info@nexora.tech" className="footer-contact-item">
+          <a href="mailto:info@Nexoura.tech" className="footer-contact-item">
             <FiMail className="footer-icon" />
-            info@nexora.tech
+            info@Nexoura.tech
           </a>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Nexora. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Nexoura. All rights reserved.</p>
          <p className="footer-subtext">An initiative by <strong>Braincrafters Pvt. Ltd.</strong></p>
       </div>
     </footer>

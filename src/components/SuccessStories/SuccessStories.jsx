@@ -15,7 +15,7 @@ const stories = [
     name: 'Josh Dhaliwal',
     title: 'Staff Software Developer at Udemy',
     image: img2,
-    quote: 'Career coaching with Nexora was game-changing. The feedback was honest, sharp, and effective.',
+    quote: 'Career coaching with Nexoura was game-changing. The feedback was honest, sharp, and effective.',
   },
   {
     name: 'Shawn Williams',
