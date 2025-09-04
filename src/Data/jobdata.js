@@ -4,7 +4,7 @@ import React from 'react';
 export const jobData = {
   python: {
     title: 'Senior Python Developer',
-    location: 'Remote',
+    location: 'Remote USA',
     description: (
       <>
         <p>Nexoura is searching for an experienced <b>Senior Python Developer</b> to work on cutting-edge web applications that revolutionize the job search experience. This person will play a key role in serving our users by developing scalable platforms that connect employers and job seekers seamlessly, making career opportunities more accessible for everyone.</p>
@@ -62,7 +62,7 @@ export const jobData = {
         </ul>
         
         <p><b>Compensation</b></p>
-        <p><b>Pay Range:</b> ₹15,00,000 - ₹25,00,000 per annum<br/>Pay ranges are a general guideline and may vary based on experience, skills, performance, and location. Additional compensation may include equity participation and performance bonuses.</p>
+        <p><b>Pay Range:</b> $120,000 - $145,000 per annum<br/>Pay ranges are a general guideline and may vary based on experience, skills, performance, and location. Additional compensation may include equity participation and performance bonuses.</p>
         
         <p><b>Equal Opportunity Statement</b></p>
         <p>Nexoura is an equal opportunity employer committed to creating a diverse and inclusive environment for all employees. All qualified applicants will receive consideration for employment without regard to race, color, religion, gender, gender identity or expression, sexual orientation, national origin, genetics, disability, age, or veteran status.</p>
@@ -74,7 +74,7 @@ export const jobData = {
   },
   salesforce: {
     title: 'Salesforce Developer',
-    location: 'Remote',
+    location: 'Remote USA',
     description: (
       <>
         <p>Nexoura is seeking a <b>Salesforce Developer</b> to join our team and build custom solutions on the Salesforce platform. You will work with our business and product teams to create scalable applications that enhance our CRM capabilities and automate key processes.</p>
@@ -119,7 +119,7 @@ export const jobData = {
         </ul>
 
         <p><b>Compensation</b></p>
-        <p><b>Pay Range:</b> ₹18,00,000 - ₹28,00,000 per annum<br/>Pay ranges are a general guideline and may vary based on experience, skills, performance, and location. Additional compensation may include equity participation and performance bonuses.</p>
+        <p><b>Pay Range:</b> $120,000 - $150,000 per annum<br/>Pay ranges are a general guideline and may vary based on experience, skills, performance, and location. Additional compensation may include equity participation and performance bonuses.</p>
         
         <p><b>Equal Opportunity Statement</b></p>
         <p>Nexoura is an equal opportunity employer committed to creating a diverse and inclusive environment for all employees. All qualified applicants will receive consideration for employment without regard to race, color, religion, gender, gender identity or expression, sexual orientation, national origin, genetics, disability, age, or veteran status.</p>
@@ -131,7 +131,7 @@ export const jobData = {
   },
   java: {
     title: 'Senior Java Engineer',
-    location: 'Remote',
+    location: 'Remote USA',
     description: (
       <>
         <p>We are looking for a <b>Senior Java Engineer</b> to build and maintain robust, high-performance backend systems. This role is crucial for developing our core services and ensuring the reliability of our platform as we scale.</p>
@@ -176,7 +176,7 @@ export const jobData = {
         </ul>
         
         <p><b>Compensation</b></p>
-        <p><b>Pay Range:</b> ₹16,00,000 - ₹26,00,000 per annum<br/>Pay ranges are a general guideline and may vary based on experience, skills, performance, and location. Additional compensation may include equity participation and performance bonuses.</p>
+        <p><b>Pay Range:</b> $110,000 - $140,000per annum<br/>Pay ranges are a general guideline and may vary based on experience, skills, performance, and location. Additional compensation may include equity participation and performance bonuses.</p>
         
         <p><b>Equal Opportunity Statement</b></p>
         <p>Nexoura is an equal opportunity employer committed to creating a diverse and inclusive environment for all employees. All qualified applicants will receive consideration for employment without regard to race, color, religion, gender, gender identity or expression, sexual orientation, national origin, genetics, disability, age, or veteran status.</p>
