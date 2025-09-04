@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import './JobApplicationForm.css';
 import { IoLocationOutline } from "react-icons/io5";
@@ -12,7 +13,11 @@ const EMAILJS_SERVICE_ID = 'service_r0o16gp';
 const EMAILJS_TEMPLATE_ID = 'template_r9i69sp';
 const EMAILJS_PUBLIC_KEY = 'bbMpCrBdBH4BK6w3i';
 
-function JobApplicationForm({ jobKey, onBack }) {
+function JobApplicationForm() {
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const jobKey = searchParams.get('job') || 'python';
+  
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -32,6 +37,10 @@ function JobApplicationForm({ jobKey, onBack }) {
 
   // Get job data based on jobKey, fallback to python if not found
   const currentJob = jobData[jobKey] || jobData.python;
+
+  const handleBackToJobs = () => {
+    navigate('/jobs');
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -58,7 +67,7 @@ function JobApplicationForm({ jobKey, onBack }) {
     }
   };
 
-  // Upload function (same as before)
+  // Upload function
   const uploadFile = async (file) => {
     if (!file) return null;
 
@@ -212,11 +221,9 @@ function JobApplicationForm({ jobKey, onBack }) {
   return (
     <div className="job-application-container">
       {/* Back Button */}
-      {onBack && (
-        <button className="back-button" onClick={onBack}>
-          <IoArrowBackOutline /> Back to Jobs
-        </button>
-      )}
+      <button className="back-button" onClick={handleBackToJobs}>
+        <IoArrowBackOutline /> Back to Jobs
+      </button>
 
       {/* Job Header Section */}
       <div className="job-header">

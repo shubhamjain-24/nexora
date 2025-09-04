@@ -1,28 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { IoLocationOutline } from "react-icons/io5";
-import JobApplicationForm from './JobApplicationForm';
 import { jobData } from '../../Data/jobdata';
 import './JobsPage.css';
 
 const JobsPage = () => {
-  const [selectedJob, setSelectedJob] = useState(null);
+  const navigate = useNavigate();
 
   const handleApplyClick = (jobKey) => {
-    setSelectedJob(jobKey);
+    navigate(`/apply?job=${jobKey}`);
   };
-
-  const handleBackToJobs = () => {
-    setSelectedJob(null);
-  };
-
-  if (selectedJob) {
-    return (
-      <JobApplicationForm 
-        jobKey={selectedJob} 
-        onBack={handleBackToJobs}
-      />
-    );
-  }
 
   return (
     <div className="jobs-page">

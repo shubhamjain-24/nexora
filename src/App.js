@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AISection from "./components/AISection/AISection";
 import ContactSection from "./components/ContactSection/ContactSection";
 import FooterSection from "./components/FooterSection/FooterSection";
@@ -9,40 +10,42 @@ import Navbar from "./components/Navbar";
 import ServicesSection from "./components/Services/ServicesSection";
 import SuccessStories from "./components/SuccessStories/SuccessStories";
 import JobsPage from "./components/JobPage/JobsPage";
+import JobApplicationForm from "./components/JobPage/JobApplicationForm";
+
+// Homepage component
+const HomePage = () => (
+  <>
+    <HeroSection />
+    <ServicesSection />
+    <AISection />
+    <IndustriesSection />
+    <SuccessStories />
+    <HowItWorksSection />
+    <ContactSection />
+  </>
+);
+
+// Job application page wrapper
+const JobApplicationPage = () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const jobKey = urlParams.get('job') || 'python';
+  
+  return <JobApplicationForm jobKey={jobKey} />;
+};
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
-
-  const handleNavigation = (page) => {
-    setCurrentPage(page);
-  };
-
-  const renderPage = () => {
-    switch (currentPage) {
-      case 'jobs':
-        return <JobsPage />;
-      case 'home':
-      default:
-        return (
-          <>
-            <HeroSection />
-            <ServicesSection />
-            <AISection />
-            <IndustriesSection />
-            <SuccessStories />
-            <HowItWorksSection />
-            <ContactSection />
-          </>
-        );
-    }
-  };
-
   return (
-    <div className="App">
-      <Navbar currentPage={currentPage} onNavigate={handleNavigation} />
-      {renderPage()}
-      <FooterSection />
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/jobs" element={<JobsPage />} />
+          <Route path="/apply" element={<JobApplicationPage />} />
+        </Routes>
+        <FooterSection />
+      </div>
+    </Router>
   );
 }
 

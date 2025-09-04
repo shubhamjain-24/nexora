@@ -1,19 +1,36 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
-export default function Navbar({ currentPage, onNavigate }) {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
-  const handleNavClick = (page, elementId = null) => {
-    if (onNavigate) {
-      onNavigate(page);
-    }
+  const handleNavClick = (elementId) => {
     setIsOpen(false);
     
-    // If we're navigating to an element on the homepage
-    if (page === 'home' && elementId) {
+    // If we're not on homepage, navigate to homepage first
+    if (location.pathname !== '/') {
+      window.location.href = `/#${elementId}`;
+      return;
+    }
+    
+    // If we're on homepage, scroll to element
+    setTimeout(() => {
+      const element = document.getElementById(elementId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
+  const handleContactClick = () => {
+    setIsOpen(false);
+    if (location.pathname !== '/') {
+      window.location.href = '/#contact';
+    } else {
       setTimeout(() => {
-        const element = document.getElementById(elementId);
+        const element = document.getElementById('contact');
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
@@ -24,46 +41,33 @@ export default function Navbar({ currentPage, onNavigate }) {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <a 
-          href="#hero" 
-          className="logo"
-          onClick={(e) => {
-            e.preventDefault();
-            handleNavClick('home', 'hero');
-          }}
-        >
+        <Link to="/" className="logo">
           Nexoura
-        </a>
+        </Link>
         <div className={`nav-links ${isOpen ? 'active' : ''}`}>
           <ul>
             <li>
-              <a 
-                href="#home"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick('home');
-                }}
+              <Link 
+                to="/" 
+                onClick={() => setIsOpen(false)}
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a 
-                href="#jobs"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick('jobs');
-                }}
+              <Link 
+                to="/jobs" 
+                onClick={() => setIsOpen(false)}
               >
                 Jobs
-              </a>
+              </Link>
             </li>
             <li>
               <a 
                 href="#services"
                 onClick={(e) => {
                   e.preventDefault();
-                  handleNavClick('home', 'services');
+                  handleNavClick('services');
                 }}
               >
                 Services
@@ -74,7 +78,7 @@ export default function Navbar({ currentPage, onNavigate }) {
                 href="#ai"
                 onClick={(e) => {
                   e.preventDefault();
-                  handleNavClick('home', 'ai');
+                  handleNavClick('ai');
                 }}
               >
                 Our AI Assistant
@@ -85,7 +89,7 @@ export default function Navbar({ currentPage, onNavigate }) {
                 href="#how-it-works"
                 onClick={(e) => {
                   e.preventDefault();
-                  handleNavClick('home', 'how-it-works');
+                  handleNavClick('how-it-works');
                 }}
               >
                 The Nexoura Way
@@ -95,15 +99,12 @@ export default function Navbar({ currentPage, onNavigate }) {
               <button className="outline-btn">+1 (352) 247-2292</button>
             </li>
             <li className="mobile-only">
-              <a 
-                href="#contact"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick('home', 'contact');
-                }}
+              <button 
+                className="solid-btn"
+                onClick={handleContactClick}
               >
-                <button className="solid-btn">Contact Us</button>
-              </a>
+                Contact Us
+              </button>
             </li>
           </ul>
         </div>
@@ -111,15 +112,12 @@ export default function Navbar({ currentPage, onNavigate }) {
 
       <div className="navbar-right desktop-only">
         <button className="outline-btn">+1 (352) 247-2292</button>
-        <a 
-          href="#contact"
-          onClick={(e) => {
-            e.preventDefault();
-            handleNavClick('home', 'contact');
-          }}
+        <button 
+          className="solid-btn"
+          onClick={handleContactClick}
         >
-          <button className="solid-btn">Contact Us</button>
-        </a>
+          Contact Us
+        </button>
       </div>
 
       <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
