@@ -129,19 +129,26 @@
   .jobs-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    /* gap: 100px; */
   }
 
   .job-card {
     padding: 1.5rem;
+    margin-top: 20px;
   }
 
   .job-card-footer {
     flex-direction: column;
     gap: 1rem;
     align-items: stretch;
+    /* border: 1px solid red; */
+    margin-top: -50px;
   }
 
   .apply-btn {
     width: 100%;
+    margin-bottom: 100px;
+  }.job-card-salary {
+    display: none;
   }
 }
