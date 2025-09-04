@@ -1,0 +1,444 @@
+/* src/JobApplicationForm.css */
+
+.job-application-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  font-family: 'Inter', sans-serif;
+  /* color: #EB6A4D; */
+}
+
+.job-header {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.job-title-wrapper {
+   font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.job-title {
+  font-size: 32px;
+  color: #333;
+  margin: 0;
+  width: 70%;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  color: #EB6A4D;
+}
+
+.apply-button-top {
+  background-color: rgb(128, 142, 107);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.job-location {
+  color: #666;
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: left;
+  margin-bottom: 3px;
+}
+
+.job-description p {
+  line-height: 1.6;
+  color: #333;
+  text-align: left;
+}
+
+.job-description ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.job-description li {
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.seprator {
+    content: "";
+    border-bottom: 1px solid rgb(44, 44, 44);
+    height: 2px;
+    width: 100%;
+}
+
+.application-form h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.required-fields-note {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Base form group styles */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+  width: 80%;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group .required {
+  color: red;
+}
+
+.file-type-note {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+}
+
+.date-group {
+  display: flex;
+  gap: 20px;
+}
+
+.date-input {
+  flex: 1;
+}
+
+.add-another-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.submit-application-button {
+background-color: rgb(128, 142, 107);
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 30px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.submit-application-button:not(:disabled):hover {
+  background-color:rgb(96, 108, 79); /* A slightly darker shade for the base hover */
+}
+
+.submit-application-button:disabled {
+  background-color: #a6caff;
+  cursor: not-allowed;
+}
+
+/* Loading button styles */
+.submit-application-button.loading {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  animation: buttonGradient 2s ease-in-out infinite alternate;
+}
+
+@keyframes buttonGradient {
+  0% {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  100% {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  }
+}
+
+/* Loading spinner */
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #ffffff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+/* Success checkmark */
+.success-checkmark {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #56ab2f;
+  animation: checkmarkBounce 0.6s ease-in-out;
+}
+
+@keyframes checkmarkBounce {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.submit-message {
+  margin-top: 15px;
+  font-weight: bold;
+  color: green;
+}
+
+.submit-message.error {
+  color: #e74c3c;
+}
+
+.submit-message.success {
+  color: #27ae60;
+}
+
+/* Floating Label Container */
+.floating-label {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Floating label input fields */
+.floating-label input,
+.floating-label select,
+.floating-label textarea {
+  width: 100%;
+  padding: 20px 10px 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 12px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s, border-bottom 0.3s;
+  border-bottom: 2px solid #ccc;
+}
+
+/* On focus */
+.floating-label input:focus,
+.floating-label select:focus,
+.floating-label textarea:focus {
+  border-color: #EB6A4D;
+  border-bottom: 3px solid #EB6A4D;
+  background-color: white !important;
+}
+
+/* Autocomplete override */
+.floating-label input:-webkit-autofill,
+.floating-label input:-webkit-autofill:hover,
+.floating-label input:-webkit-autofill:focus,
+.floating-label input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  background-color: white !important;
+}
+
+/* Floating Label text */
+.floating-label label {
+  position: absolute;
+  left: 10px;
+  top: 16px;
+  color: #333;
+  font-weight: bold;
+  font-size: 12px;
+  background-color: white;
+  padding: 0 5px;
+  transition: 0.2s ease all;
+  pointer-events: none;
+}
+
+/* Float label up on input focus or if it has content */
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label,
+.floating-label select:focus + label,
+.floating-label select:not(:placeholder-shown) + label,
+.floating-label textarea:focus + label,
+.floating-label textarea:not(:placeholder-shown) + label {
+  top: 4px;
+  left: 8px;
+  font-size: 12px;
+  color: #EB6A4D;
+}
+
+/* Upload button section styling */
+.upload-section {
+  /* margin: 30px auto; */
+  width: 40%;
+  font-size: 14px;
+  text-align: left;
+}
+
+.upload-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.required {
+  color: red;
+  margin-left: 4px;
+}
+
+.upload-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Base styles for all upload buttons */
+.upload-btn {
+  padding: 12px 24px;
+  font-size: 12px;
+  color: #1a73e8;
+  background-color: white;
+  border: 2px solid #1a73e8;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+}
+
+/* Attach button-specific styles */
+.upload-btn.attach {
+  background-color: #e8f0fe;
+}
+
+/* Link-style buttons for Dropbox, etc. */
+.upload-btn.link {
+  color: #1a73e8;
+  background-color: white;
+  border: 2px solid #e0e6ed;
+}
+
+.upload-btn.link:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.upload-btn:hover {
+  background-color: #e8f0fe;
+  color: #174ea6;
+}
+
+.file-type-note {
+  font-size: 14px;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Hides the default file input */
+.hidden-file-input {
+  display: none;
+}
+
+/* File selected display styles */
+.file-selected {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  margin-top: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #495057;
+  transition: all 0.2s ease;
+}
+
+.file-selected:hover {
+  background-color: #f1f3f4;
+  border-color: #dadce0;
+}
+
+.file-icon {
+  font-size: 18px;
+  color: #1a73e8;
+}
+
+.file-name {
+  flex: 1;
+  font-weight: 500;
+  color: #333;
+  word-break: break-all;
+}
+
+.remove-file {
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.remove-file:hover {
+  background-color: #dc3545;
+  color: white;
+}
+/* Back Button for Job Application Form */
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: #EB6A4D;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #d6573a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .jobs-page {
+    padding: 2rem 1rem;
+  }}
